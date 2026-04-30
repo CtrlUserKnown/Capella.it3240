@@ -1,0 +1,23 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+/* site varibales */
+:root {
+    --background-main: #00DF81; /* Rich Black */
+    --foreground-main: #F1F7F6; /* Anti-Flash White */
+    --secondary-color: #03624C; /* Bangladesh Green */
+    /* fonts */
+    --site-font: "Italiana", sans-serif;
+}
+
+body {
+    font-family: var(--site-font);
+    font-weight: 400;
+    font-style: normal;
+    background: var(--background-main);
+    color: var(--foreground-main);
+}
+
+header, footer {
+    background: var(--secondary-color);
+}
