@@ -1,23 +1,41 @@
 /* imports */
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* site varibales */
-:root {
-    --background-main: #00DF81; /* Rich Black */
-    --foreground-main: #F1F7F6; /* Anti-Flash White */
-    --secondary-color: #03624C; /* Bangladesh Green */
-    /* fonts */
-    --site-font: "Italiana", sans-serif;
+/* /* site varibales */ */
+/* :root { */
+/*     --background-main: #00DF81; /* Rich Black */ */
+/*     --foreground-main: #F1F7F6; /* Anti-Flash White */ */
+/*     --secondary-color: #03624C; /* Bangladesh Green */ */
+/*     --site-font: "Italiana", sans-serif; */
+/* } */
+
+.hanken-grotesk-<uniquifier> {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
-body {
-    font-family: var(--site-font);
+/* body { */
+/*     font-family: "Hanken Grotesk", sans-serif; */
+/*     font-weight: 400; */
+/*     font-style: normal; */
+/* } */
+
+header {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+main {
+    font-family: "Hanken Grotesk", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background: var(--background-main);
-    color: var(--foreground-main);
 }
 
-header, footer {
-    background: var(--secondary-color);
+footer {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
