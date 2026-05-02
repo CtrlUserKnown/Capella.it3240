@@ -22,6 +22,10 @@
 /*     font-style: normal; */
 /* } */
 
+body {
+    background: #00DF81;
+}
+
 header {
     font-family: "Hanken Grotesk", sans-serif;
     font-weight: 800;
