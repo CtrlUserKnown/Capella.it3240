@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <!-- Author: Christian Alvarez -->
-<!-- Date: 05/17/2026 -->
+<!-- Date: 05/10/2026 -->
 <!-- FourSides Studio - Home Page -->
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <!-- Link to external stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>FourSides Studio</title>
     </head>
 
     <body>
         <header>
-            <img src="img/FourSidesV2.png" alt="FourSides Studio Logo" height="128">
-            <h1>Fourside Studio</h1>
-            <h2>Collective Creativity, Rooted in Chicago.</h2>
+            <!-- header brand: logo and text side by side -->
+            <div class="header-brand">
+                <img src="img/FourSidesV2.png" alt="FourSides Studio Logo" height="128">
+                <div>
+                    <h1>Fourside Studio</h1>
+                    <!-- id selector: header tagline -->
+                    <h2 id="site-tagline">Collective Creativity, Rooted in Chicago.</h2>
+                </div>
+            </div>
 
-            <!-- Horizontal nav bar styled with Flexbox in CSS -->
+            <!-- Navigation: unordered list styled as horizontal flexbox bar via CSS -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -25,6 +32,7 @@
             </nav>
         </header>
 
+        <!-- Main page content -->
         <main>
             <h2>The Four Sides of Our City, The Four Sides of Our Vision</h2>
             <p>
@@ -37,20 +45,27 @@
                 We don't just use industry-standard tools; we build the future of our craft. A core pillar of our practice is the development of in-house, industry-leading creative technology. By merging custom software and experimental tools with traditional painting and design workflows, we push the boundaries of what is visually possible.
             </p>
 
+            <!-- Studio ecosystem section — flex row with image left, text right -->
             <h2>Our Studio's Ecosystem</h2>
-            <img src="img/flimMakers.jpeg" alt="FourSides members having a competitive discussion about projects">
-            <p>
-                We transform abstract concepts into tangible visual languages, ensuring that every project is as functional as it is aesthetic.
-            </p>
+            <div class="ecosystem">
+                <img class="ecosystem-img" src="img/flimMakers.jpeg" alt="FourSides members having a competitive discussion about projects">
+                <div class="ecosystem-text">
+                    <p>
+                        We transform abstract concepts into tangible visual languages, ensuring that every project is as functional as it is aesthetic.
+                    </p>
 
-            <p>
-                Through our <strong>Systems of Identity</strong>, we do not just design logos; we construct foundational visual architectures that define how the world interacts with your brand.
-            </p>
+                    <p>
+                        Through our <strong>Systems of Identity</strong>, we do not just design logos; we construct foundational visual architectures that define how the world interacts with your brand.
+                    </p>
 
-            <p>
-                <em>Multidimensional Campaigns</em> orchestrate immersive storytelling experiences, weaving together film, digital, and print to ensure your message hits from every angle. We also specialize in <strong>Bespoke Artistic Expression</strong>, creating one-of-a-kind art pieces that merge our signature technical experimentation with traditional fine art sensibilities. Our focus on <em>Technological Architecture</em> allows us to solve complex design hurdles by building custom tools and pipelines, giving your projects a creative edge that cannot be replicated by standard software.
-            </p>
+                    <p>
+                        <em>Multidimensional Campaigns</em> orchestrate immersive storytelling experiences, weaving together film, digital, and print to ensure your message hits from every angle. We also specialize in <strong>Bespoke Artistic Expression</strong>, creating one-of-a-kind art pieces that merge our signature technical experimentation with traditional fine art sensibilities. Our focus on <em>Technological Architecture</em> allows us to solve complex design hurdles by building custom tools and pipelines, giving your projects a creative edge that cannot be replicated by standard software.
+                    </p>
+                </div>
+            </div>
+            <!-- end ecosystem section -->
 
+            <!-- Services overview list -->
             <h2>What We Offer</h2>
             <ul>
                 <li><strong>Film Production</strong> — narrative, documentary, and experimental work</li>
@@ -59,49 +74,6 @@
                 <li><strong>Open-Source Software</strong> — creative tools built by artists, for artists</li>
             </ul>
 
-            <!-- Featured cards section - six service cards laid out with Flexbox -->
-            <h2>Featured Work</h2>
-            <section class="cards-grid">
-
-                <article class="card">
-                    <img src="img/flimMakers.jpeg" alt="Film production still">
-                    <h3>Narrative Film</h3>
-                    <p>Long-form storytelling with a deliberate visual language built from the ground up for each project.</p>
-                </article>
-
-                <article class="card">
-                    <img src="img/flimMakers.jpeg" alt="Documentary production">
-                    <h3>Documentary Work</h3>
-                    <p>Observational and investigative films that document Chicago culture with honesty and craft.</p>
-                </article>
-
-                <article class="card">
-                    <img src="img/flimMakers.jpeg" alt="Brand identity design">
-                    <h3>Brand Identity</h3>
-                    <p>Visual systems engineered for longevity, built around a rigorous understanding of the subject.</p>
-                </article>
-
-                <article class="card">
-                    <img src="img/flimMakers.jpeg" alt="Fine art piece">
-                    <h3>Fine Art</h3>
-                    <p>Original works that merge studio practice with technical experimentation and traditional sensibilities.</p>
-                </article>
-
-                <article class="card">
-                    <img src="img/flimMakers.jpeg" alt="Open source software tools">
-                    <h3>Open-Source Tools</h3>
-                    <p>Software built in-house and released freely so any creative can access, study, and build on it.</p>
-                </article>
-
-                <article class="card">
-                    <img src="img/flimMakers.jpeg" alt="Experimental project">
-                    <h3>Experimental Projects</h3>
-                    <p>Work that exists outside conventional categories, pushing what is visually and technically possible.</p>
-                </article>
-
-            </section>
-            <!-- End featured cards section -->
-
             <blockquote>
                 <p>The most compelling work comes from the collision of disciplines, not the isolation of them.</p>
             </blockquote>
@@ -109,10 +81,56 @@
             <p>
                 FourSides is headquartered in <abbr title="Chicago, Illinois">Chicago, IL</abbr>, and takes on projects locally and nationally.
             </p>
+
+            <!-- Featured disciplines section: six cards in a flexbox layout -->
+            <!-- Cards wrap and reflow as the browser window is resized -->
+            <h2>Featured Work Areas</h2>
+            <div class="cards-container">
+
+                <div class="card">
+                    <img src="img/img-foursidefilm.webp" alt="Film production team on set">
+                    <h3>Narrative Film</h3>
+                    <p>Story-driven productions built around strong visual language and intentional cinematography.</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/img-foursidefilm2.webp" alt="Documentary filming">
+                    <h3>Documentary</h3>
+                    <p>Long-form documentary work that captures truth without sacrificing craft.</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/img-foursidefilm3.webp" alt="Experimental film work">
+                    <h3>Experimental Film</h3>
+                    <p>Projects that push the boundaries of what film can communicate and how it can be made.</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/img-foursidebrand.webp" alt="Brand identity design work">
+                    <h3>Brand Identity</h3>
+                    <p>Visual systems designed for longevity, built on a foundation of rigorous research and logic.</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/img-foursidefineart.jpeg" alt="Fine art studio work">
+                    <h3>Fine Art</h3>
+                    <p>Original works that sit at the intersection of studio practice and commercial application.</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/img-foursidesoftware.jpeg" alt="Open source software development">
+                    <h3>Open-Source Software</h3>
+                    <p>Creative tools built in-house and released freely so any artist can use, study, and improve them.</p>
+                </div>
+
+            </div>
+            <!-- end featured cards section -->
+
         </main>
 
+        <!-- Footer with site links and copyright -->
         <footer>
-            <!-- Footer nav mirrors header nav -->
+            <!-- Navigation repeated for usability -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -120,8 +138,9 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <p>&copy; Fourside Studio</p>
-            <p>Collective Creativity, Rooted in Chicago.</p>
+            <!-- id selector: copyright -->
+            <p id="copyright">&copy; Fourside Studio</p>
+            <p class="tagline">Collective Creativity, Rooted in Chicago.</p>
         </footer>
     </body>
 </html>
