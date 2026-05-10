@@ -1,45 +1,111 @@
-/* imports */
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+/* font import */
 
-/* /* site varibales */ */
-/* :root { */
-/*     --background-main: #00DF81; /* Rich Black */ */
-/*     --foreground-main: #F1F7F6; /* Anti-Flash White */ */
-/*     --secondary-color: #03624C; /* Bangladesh Green */ */
-/*     --site-font: "Italiana", sans-serif; */
-/* } */
-
-.hanken-grotesk-<uniquifier> {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-/* body { */
-/*     font-family: "Hanken Grotesk", sans-serif; */
-/*     font-weight: 400; */
-/*     font-style: normal; */
-/* } */
-
+/* body styles */
 body {
-    background: #00DF81;
-}
-
-header {
-    font-family: "Hanken Grotesk", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-}
-
-main {
+    background-color: #030E0E;
+    color: #F1F7F7;
     font-family: "Hanken Grotesk", sans-serif;
     font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* header styles */
+header {
+    background-color: #042222;
+    font-weight: 800;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* main styles */
+main {
+    font-weight: 400;
+    padding: 1rem 1.5rem;
+}
+
+/* footer styles */
+footer {
+    background-color: #042222;
+    font-weight: 300;
+    font-size: 0.875rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* heading colors */
+h1, h2, h3 {
+    color: #F1F7F7;
+}
+
+/* h1 size */
+h1 {
+    font-size: 2rem;
+}
+
+/* h2 size */
+h2 {
+    font-size: 1.5rem;
+}
+
+/* h3 size */
+h3 {
+    font-size: 1.25rem;
+}
+
+/* link styles */
+a {
+    color: #06DF82;
+    text-decoration: none;
+}
+
+/* link hover state */
+a:hover {
+    text-decoration: underline;
+}
+
+/* nav list styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* nav list items */
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+/* strong tag color */
+strong {
+    color: #06DF82;
+}
+
+/* blockquote styles */
+blockquote {
+    border-left: 0.25rem solid #06DF82;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    font-style: italic;
+}
+
+/* address styles */
+address {
     font-style: normal;
 }
 
-footer {
-    font-family: "Hanken Grotesk", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+/* definition term styles */
+dt {
+    color: #06DF82;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+/* definition description styles */
+dd {
+    margin-left: 1.5rem;
 }
