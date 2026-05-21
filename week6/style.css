@@ -271,6 +271,25 @@ dd {
     text-decoration: none;
 }
 
+/* tool list styled as a distinctive list (not nav) */
+.tool-list {
+    list-style: square;
+    padding-left: 2rem;
+    margin: 1.5rem 0;
+    color: #F1F7F7;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.tool-list li {
+    font-weight: 400;
+    padding-left: 0.5rem;
+}
+
+.tool-list li::marker {
+    color: #2DC295;
+}
+
 /* responsive: single column on small screens */
 @media (max-width: 600px) {
     .page-container {
