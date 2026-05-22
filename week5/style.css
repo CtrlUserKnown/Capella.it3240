@@ -33,7 +33,7 @@ body {
 
 /* grid area assignments */
 header { grid-area: header; }
-nav[aria-label="breadcrumb"] { grid-area: breadcrumb; }
+nav[aria-label="breadcrumb"] { grid-area: breadcrumb; padding: 0.5rem 1.5rem; }
 .breadcrumb-sep {
     color: #2DC295;
     margin: 0 0.5rem;
