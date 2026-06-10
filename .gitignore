@@ -6,3 +6,6 @@
 
 *.docx
 **/*.docx
+
+copilot.*
+**/copilot.*

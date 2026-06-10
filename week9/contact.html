@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Author: Christian Alvarez -->
-<!-- Date: 05/25/2026 -->
+<!-- Date: 06/14/2026 -->
 <!-- FourSides Studio - Contact Page -->
 <html lang="en">
     <head>
@@ -65,17 +65,20 @@
                     <fieldset id="contact-fieldset">
                         <legend>Project Inquiry</legend>
 
-                        <!-- Name text input -->
+                        <!-- Name text input: required, minlength 2, maxlength 100 -->
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2" maxlength="100">
+                        <span class="error-message" id="name-error"></span>
 
-                        <!-- Email input -->
+                        <!-- Email input: required, type="email" triggers browser email validation -->
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <span class="error-message" id="email-error"></span>
 
-                        <!-- Phone input -->
+                        <!-- Phone input: type="tel", pattern requires XXX-XXX-XXXX format -->
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(888) 888-8888">
+                        <input type="tel" id="phone" name="phone" placeholder="312-555-0123" pattern="\d{3}-\d{3}-\d{4}">
+                        <span class="error-message" id="phone-error"></span>
 
                         <!-- Role text input with datalist -->
                         <label for="role">Role / Title</label>
@@ -123,17 +126,23 @@
                             <label for="interest-news"><input type="checkbox" id="interest-news" name="interest" value="newsletter"> Newsletter Signup</label>
                         </fieldset>
 
-                        <!-- Textarea for message -->
+                        <!-- Textarea for message: required, minlength 10, maxlength 1000 -->
                         <label for="message">Tell Us About Your Project</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Describe your project or inquiry..."></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe your project or inquiry..." required minlength="10" maxlength="1000"></textarea>
+                        <span class="error-message" id="message-error"></span>
 
                         <!-- Reset and Submit buttons -->
                         <div class="form-buttons">
                             <input type="reset" value="Clear">
                             <input type="submit" value="Send Message">
                         </div>
+                        <!-- Overall validation status message -->
+                        <div id="form-message" role="alert"></div>
                     </fieldset>
                 </form>
+
+                <!-- Container where form data will be displayed after submission -->
+                <div id="form-output"></div>
             </main>
 
             <!-- Footer with copyright -->
@@ -142,6 +151,10 @@
                 <p class="tagline">Collective Creativity, Rooted in Chicago.</p>
             </footer>
         </div>
+
+        <!-- Link to external JavaScript files: validation runs first, then form display -->
+        <script src="validation.js"></script>
+        <script src="form.js"></script>
 
         <div class="bottom-nav">
             <!-- Navigation: unordered list styled as horizontal flexbox bar via CSS -->

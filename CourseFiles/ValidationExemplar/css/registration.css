@@ -1,0 +1,120 @@
+:root {
+    margin: 0;
+    padding: 1rem;
+}
+
+.title {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    width: min(50rem, 90%);
+    margin-inline: auto;
+}
+
+.note {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    row-gap: 0.75rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+legend {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 0.25rem;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    grid-column: 1 / 2;
+    text-align: right;
+    line-height: 1.25;
+    padding-right: 0.5rem;
+}
+
+input {
+    grid-column: 2 / 3;
+    text-align: left;
+    align-self: self-start;
+    line-height: 1.25;
+    padding-left: 0.5rem;
+    font-size: 125%;
+}
+
+input[type="submit"] {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    justify-self: start;
+    align-self: start;
+    margin-top: 0.25rem;
+}
+
+.invalid {
+    background-color: lightgoldenrodyellow;
+}
+
+.error-message {
+    grid-column: 3 / 4;
+    color: darkred;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    align-self: center;
+    white-space: nowrap;
+}
+
+#resultMessage {
+    display: inline-block;
+    vertical-align: top;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 1.5rem;
+}
+
+
+/* Responsive layout for narrow screens */
+@media (max-width: 600px) {
+    fieldset {
+        grid-template-columns: 1fr;
+    }
+
+    label {
+        grid-column: 1 / -1;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 0.25rem;
+    }
+
+    input {
+        grid-column: 1 / -1;
+    }
+
+    .error-message {
+        grid-column: 1 / -1;
+        padding-left: 0;
+        margin-bottom: 0.5rem;
+        white-space: normal;
+    }
+}
