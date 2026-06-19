@@ -12,15 +12,14 @@ function displayFormData(event) {
 
     // --- Read text inputs using getElementById() ---
     let name = document.getElementById("name").value;
-    console.log("Name:", name);
-
     let email = document.getElementById("email").value;
-    console.log("Email:", email);
-
-    let phone = document.getElementById("phone").value;
-    console.log("Phone:", phone);
-
     let role = document.getElementById("role").value;
+    let phone = document.getElementById("phone").value;
+
+    // --- Output to the console ---
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Phone:", phone);
     console.log("Role:", role);
 
     // --- Read select menu using getElementById() ---
