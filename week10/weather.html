@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Author: Christian Alvarez -->
+<!-- Date: 06/21/2026 -->
+<!-- FourSides Studio - Weather Lookup Page -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--
+            Page Purpose:
+            The Weather page exposes the studio's "LocationWeather" tool — a fictional
+            open-source utility built for film crews scouting remote shooting locations.
+            The real-world premise (checking conditions before a shoot) gives the feature
+            a plausible reason to exist on a creative studio site. From a course perspective
+            this page demonstrates asynchronous JavaScript: making a live HTTP request to the
+            OpenWeatherMap API, handling the Promise chain, and rendering the response into
+            the DOM without a page reload.
+
+            Element Choices:
+            - <input type="radio"> for unit toggle (°F / °C): Radio buttons enforce
+              mutually exclusive selection natively. A toggle button built from <div>s
+              would require extra ARIA attributes and keyboard handling to match that
+              behavior accessibly.
+            - <span> elements inside #weather-results: Span tags are used as injection
+              targets for the API response data (city name, temperature, conditions).
+              They are inline elements, so they sit naturally inside the <p> labels
+              without disrupting the surrounding text flow.
+            - role="alert" on #weather-message: Tells screen readers to announce the
+              element's content automatically when it changes — important for the
+              loading, success, and error states that appear after the form is submitted.
+        -->
+        <!-- Link to external stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>FourSides Studio | Weather</title>
+    </head>
+
+    <body>
+        <div class="page-container">
+            <header>
+                <!-- header brand: logo and text side by side -->
+                <div class="header-brand">
+                    <img src="img/FourSidesV2.png" alt="FourSides Studio Logo" height="128">
+                    <div>
+                        <h1>Fourside Studio</h1>
+                        <!-- id selector: header tagline -->
+                        <h2 id="site-tagline">Collective Creativity, Rooted in Chicago.</h2>
+                    </div>
+                </div>
+            </header>
+
+            <nav aria-label="breadcrumb">
+                <p>Home <span class="breadcrumb-sep">&gt;</span> Weather</p>
+            </nav>
+
+            <!-- Main weather page content -->
+            <main>
+                <h2>Weather Lookup</h2>
+                <!-- ecosystem flex layout: image left, text right -->
+                <div class="ecosystem">
+                    <img class="ecosystem-img" src="img/img-wheather.jpeg" alt="Weather and atmosphere imagery">
+                    <div class="ecosystem-text">
+                        <p>
+                            Use the form below to look up current weather conditions for any location on Earth.
+                            Enter the latitude and longitude coordinates, and we will fetch the latest data
+                            from the OpenWeatherMap API.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Weather lookup form -->
+                <h3>Enter Coordinates</h3>
+                <form id="weatherForm">
+                    <div id="weather-form-fields">
+                        <label for="latitude">Latitude</label>
+                        <input type="text" id="latitude" name="latitude" placeholder="e.g. 41.8781" required>
+
+                        <label for="longitude">Longitude</label>
+                        <input type="text" id="longitude" name="longitude" placeholder="e.g. -87.6298" required>
+
+                        <label>Units</label>
+                        <div id="unit-toggle">
+                            <input type="radio" name="units" value="imperial" id="unit-imperial" checked>
+                            <label for="unit-imperial">&deg;F</label>
+                            <input type="radio" name="units" value="metric" id="unit-metric">
+                            <label for="unit-metric">&deg;C</label>
+                        </div>
+
+                        <div class="form-buttons">
+                            <input type="submit" value="Get Weather">
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Status message area -->
+                <div id="weather-message" class="form-message" role="alert"></div>
+
+                <!-- Weather results display section -->
+                <div id="weather-results">
+                    <h3>Current Conditions</h3>
+                    <p><strong>Location:</strong> <span id="location-name"></span></p>
+                    <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+                    <p><strong>Conditions:</strong> <span id="conditions"></span></p>
+                </div>
+            </main>
+
+            <!-- Footer with copyright -->
+            <footer>
+                <p id="copyright">&copy; Fourside Studio</p>
+                <p class="tagline">Collective Creativity, Rooted in Chicago.</p>
+            </footer>
+        </div>
+
+        <div class="bottom-nav">
+            <nav>
+                <div id="nav-slider" aria-hidden="true"></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <script src="config.js"></script>
+        <script src="weather.js"></script>
+        <script src="nav.js"></script>
+    </body>
+</html>

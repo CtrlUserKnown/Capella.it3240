@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Author: Christian Alvarez -->
+<!-- Date: 06/21/2026 -->
+<!-- FourSides Studio - Tools Page -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--
+            Page Purpose:
+            This page lists the open-source software tools FourSides has built and released.
+            Within the site narrative it serves as the studio's software portfolio. From a
+            course perspective it exists to demonstrate JavaScript array manipulation and
+            dynamic DOM injection — the tool list is not hard-coded in HTML; it is built
+            from an array in app.js and inserted into the page at load time.
+
+            Element Choices:
+            - <p id="list"> (empty on load): Left intentionally empty in the HTML. JavaScript
+              populates it with a <ul> built from the Tools array. This shows the
+              separation between static markup and dynamically generated content.
+            - <script src="app.js"> placed before </body>: Scripts are loaded after the HTML
+              so that getElementById("list") finds the element before the script runs,
+              without needing a DOMContentLoaded listener.
+        -->
+        <!-- Link to external stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>FourSides Studio | Tools</title>
+    </head>
+
+    <body>
+        <div class="page-container">
+            <header>
+                <!-- header brand: logo and text side by side -->
+                <div class="header-brand">
+                    <img src="img/FourSidesV2.png" alt="FourSides Studio Logo" height="128">
+                    <div>
+                        <h1>Fourside Studio</h1>
+                        <!-- id selector: header tagline -->
+                        <h2 id="site-tagline">Collective Creativity, Rooted in Chicago.</h2>
+                    </div>
+                </div>
+            </header>
+
+            <nav aria-label="breadcrumb">
+                <p>Home <span class="breadcrumb-sep">&gt;</span> Tools</p>
+            </nav>
+
+            <!-- Main tools page content -->
+            <main>
+                <h2>Our Open-Source Tools</h2>
+                <!-- ecosystem flex layout: image left, text right -->
+                <div class="ecosystem">
+                    <img class="ecosystem-img" src="img/img-foursidesoftware.jpeg" alt="Open source software development">
+                    <div class="ecosystem-text">
+                        <p>
+                            At FourSides, we believe the tools artists use should be transparent, community-owned, and built with a clear purpose. Every piece of software we develop is released as free and open-source so that any creative, regardless of resources, can access, study, and build on them.
+                        </p>
+                        <p>
+                            Below is a list of tools we have built and released to the community. Each one was created to solve a real problem that came up in our own workflow.
+                        </p>
+                    </div>
+                </div>
+                <!-- end ecosystem section -->
+
+                <h2>Available Tools</h2>
+                <p>
+                    One of our newest tools is <strong>LocationWeather</strong>, a free weather lookup tool built for independent filmmakers and small crews who need to check conditions in remote shooting locations. Enter any set of coordinates to get current temperature, conditions, and forecast data — so you can plan your shoot with confidence, no matter how far off the grid you are.
+                </p>
+                <!-- JavaScript inserts the list of tools here -->
+                <p id="list"></p>
+
+            </main>
+
+            <!-- Footer with copyright -->
+            <footer>
+                <p id="copyright">&copy; Fourside Studio</p>
+                <p class="tagline">Collective Creativity, Rooted in Chicago.</p>
+            </footer>
+        </div>
+
+        <div class="bottom-nav">
+            <nav>
+                <div id="nav-slider" aria-hidden="true"></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script src="app.js"></script>
+        <script src="nav.js"></script>
+    </body>
+</html>
