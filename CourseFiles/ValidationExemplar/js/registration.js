@@ -2,8 +2,8 @@ const configureValidation = function() {
     document.getElementsByTagName("form").item(0).onsubmit = function(event) {
         event.preventDefault()
     }
-    const submitButton = document.getElementById("submitButton");
-    submitButton.addEventListener("click", function() {
+    const Submit = document.getElementById("Submit");
+    Submit.addEventListener("click", function() {
         const form = document.getElementsByTagName("form")[0]
         const message = document.getElementById("resultMessage")
         if(form.checkValidity()) {

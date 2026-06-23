@@ -3,8 +3,8 @@ const configureValidation = function() {
         event.preventDefault()
     }
     // Submit button triggers validation
-    const submitButton = document.getElementById("submitButton");
-    submitButton.addEventListener("click", function() {
+    const Submit = document.getElementById("Submit");
+    Submit.addEventListener("click", function() {
         console.log("Submit handler invoked!")
         const form = document.getElementsByTagName("form")[0]
         const message = document.getElementById("resultMessage")
