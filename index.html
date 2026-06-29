@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Author: Christian Alvarez -->
+<!-- IT3240 Introduction to Web Development — Portfolio Showcase -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FourSides Studio is a fictional Chicago-based creative collective built over 10 weeks for IT3240 at Capella University. A fully interactive multi-page site featuring semantic HTML, CSS Grid, JavaScript, and a live weather API.">
+    <meta name="author" content="Christian Alvarez">
+    <meta property="og:title" content="FourSides Studio — IT3240 Web Development">
+    <meta property="og:description" content="FourSides Studio is a fictional Chicago-based creative collective built over 10 weeks for IT3240 at Capella University. A fully interactive multi-page site featuring semantic HTML, CSS Grid, JavaScript, and a live weather API.">
+    <meta property="og:image" content="project-final-submission/img/FourSidesV2.png">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="project-final-submission/img/FourSidesV2.png">
+    <link rel="stylesheet" href="style.css">
+    <title>FourSides Studio — IT3240</title>
+</head>
+<body>
+
+    <div class="site-header">
+
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <span class="course-badge">IT3240 &middot; Capella University</span>
+                <span class="brand-name">FourSides Studio</span>
+            </div>
+
+            <img class="top-bar-logo" src="project-final-submission/img/FourSidesV2.png" alt="FourSides Studio logo">
+
+            <div class="top-bar-right">
+                <button
+                    class="dropdown-toggle"
+                    id="info-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="info-panel"
+                >
+                    About this project <span class="toggle-arrow" aria-hidden="true">&#9660;</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="info-panel" id="info-panel" aria-hidden="true">
+            <div class="info-panel-inner">
+
+                <p class="overview-body">
+                    Over 10 weeks in <strong>IT3240</strong> at Capella University, I designed and built a multi-page website for a fictional company: <strong>FourSides Studio</strong>, a Chicago-based art, film, and open-source technology collective. The course challenged me to think through the full design process, covering what pages a real company would need, how to structure content semantically, and how to layer in interactivity with CSS and JavaScript.
+                </p>
+                <p class="overview-body">
+                    FourSides is modeled after a creator collective, similar in spirit to Glitch, that supports independent artists without the constraints of major corporations. The studio spans film production, graphic design, fine art, and open-source software, all rooted in Chicago's four-sided geography.
+                </p>
+
+                <div class="stats" role="list" aria-label="Project statistics">
+                    <div class="stat" role="listitem">
+                        <span class="stat-num">10</span>
+                        <span class="stat-label">Weeks</span>
+                    </div>
+                    <div class="stat" role="listitem">
+                        <span class="stat-num">5</span>
+                        <span class="stat-label">Pages</span>
+                    </div>
+                    <div class="stat" role="listitem">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">JS Files</span>
+                    </div>
+                    <div class="stat" role="listitem">
+                        <span class="stat-num">1</span>
+                        <span class="stat-label">Live API</span>
+                    </div>
+                </div>
+
+                <div class="skill-tags" aria-label="Skills demonstrated">
+                    <span class="skill-tag">Semantic HTML</span>
+                    <span class="skill-tag">CSS Grid</span>
+                    <span class="skill-tag">Flexbox</span>
+                    <span class="skill-tag">CSS Animations</span>
+                    <span class="skill-tag">Responsive Design</span>
+                    <span class="skill-tag">DOM Manipulation</span>
+                    <span class="skill-tag">Fetch API</span>
+                    <span class="skill-tag">Form Validation</span>
+                    <span class="skill-tag">Event Handling</span>
+                    <span class="skill-tag">Metadata</span>
+                    <span class="skill-tag">Accessibility</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="iframe-section">
+        <iframe
+            id="site-preview"
+            src="project-final-submission/index.html"
+            title="FourSides Studio — live site"
+        ></iframe>
+    </div>
+
+    <script>
+        var siteHeader = document.querySelector(".site-header");
+        var toggle     = document.getElementById("info-toggle");
+        var panel      = document.getElementById("info-panel");
+
+        function openPanel() {
+            panel.classList.add("open");
+            panel.setAttribute("aria-hidden", "false");
+            toggle.setAttribute("aria-expanded", "true");
+        }
+
+        function closePanel() {
+            panel.classList.remove("open");
+            panel.setAttribute("aria-hidden", "true");
+            toggle.setAttribute("aria-expanded", "false");
+        }
+
+        // Hover: open when the cursor enters the top bar, close when it leaves
+        // (mouseenter/mouseleave don't bubble, so moving into the panel keeps it open
+        // because the panel is a child of .site-header)
+        siteHeader.addEventListener("mouseenter", openPanel);
+        siteHeader.addEventListener("mouseleave", closePanel);
+
+        // Touch fallback: tap the button to toggle on devices without hover
+        toggle.addEventListener("click", function() {
+            panel.classList.contains("open") ? closePanel() : openPanel();
+        });
+
+        // Size iframe to fill exactly the viewport below the top bar
+        function sizeFrame() {
+            var bar     = document.querySelector(".top-bar");
+            var section = document.querySelector(".iframe-section");
+            section.style.height = (window.innerHeight - bar.offsetHeight) + "px";
+        }
+        sizeFrame();
+        window.addEventListener("resize", sizeFrame);
+    </script>
+
+</body>
+</html>

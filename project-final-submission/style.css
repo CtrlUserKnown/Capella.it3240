@@ -14,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    height: 100dvh;
     overflow: hidden;
 }
 
@@ -344,6 +345,8 @@ dd {
     text-align: center;
     position: relative;
     transition: color 0.15s ease;
+    /* removes 300ms tap delay on iOS Safari */
+    touch-action: manipulation;
 }
 
 .bottom-nav nav ul li a:hover {
@@ -419,6 +422,10 @@ dd {
     font-family: "Hanken Grotesk", sans-serif;
     font-size: 0.9rem;
     box-sizing: border-box;
+    /* prevent iOS Safari from overriding the custom styles with native input chrome */
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
 }
 
 #webForm input:focus,
