@@ -1,32 +1,34 @@
-# IT3240 - Front-End Web Development
+# <img src="project-final-submission/img/FourSidesIcon.jpg" alt="" height="32" align="center"> FourSides Studio — IT3240 Final Project
 
-This repository contains my weekly assignments for **IT3240** at **Capella University**, spanning a 10-week quarter where I built a multi-page website for a fictional creative studio called **FourSides Studio**.
+A multi-page website for **FourSides Studio**, a fictional Chicago-based creative collective spanning film production, graphic design, fine art, and open-source software development. Built over 10 weeks for **IT3240: Introduction to Web Development** at **Capella University**.
 
-The project progresses from basic HTML through CSS layout, JavaScript DOM manipulation, form handling, client-side validation, and finally external API integration (OpenWeatherMap) with animated UI features.
+The company concept is modeled after collectives like Glitch — a hub where creators support each other's creative endeavors through open-source solutions and filmmaking, free from the constraints of major corporate interests.
 
 ## Tech Stack
 
-- HTML5
-- CSS3 (Flexbox, Grid, animations)
-- JavaScript (DOM API, Fetch, Constraint Validation API)
+- HTML5 (semantic landmarks, forms, metadata)
+- CSS3 (Grid, Flexbox, animations, responsive design)
+- JavaScript (DOM API, Fetch API, Constraint Validation API, event-driven navigation)
 
-## Structure
+## Pages
 
-- `week1/` through `week10/` — weekly working directories
-- `CourseFiles/` — instructor-provided exemplars
-- `Submission/` — ZIP archives of submitted assignments
+| Page | Description |
+|------|-------------|
+| **Home** (`index.html`) | Brand identity, studio ecosystem, featured work areas as card grid |
+| **About** (`about.html`) | Origin story, core values (no AI, freedom, FOSS, fellowship), disciplines |
+| **Contact** (`contact.html`) | Project inquiry form with radio/checkbox/select/datalist controls, client-side validation |
+| **Tools** (`tools.html`) | Open-source software portfolio — tool list dynamically injected from a JS array |
+| **Weather** (`weather.html`) | Live weather lookup via OpenWeatherMap API for film crews scouting shooting locations |
 
-## Topics Covered
+## Features
 
-| Week | Topic |
-|------|-------|
-| 1 | HTML fundamentals |
-| 2 | Multi-page sites, navigation |
-| 3 | External CSS, colors, typography |
-| 4 | Flexbox layouts, card UI |
-| 5 | Layout refinement |
-| 6 | JavaScript arrays, DOM injection |
-| 7 | JavaScript functions & iteration |
-| 8 | HTML forms, event handling |
-| 9 | Constraint Validation API |
-| 10 | Fetch API, animated nav pill, config management |
+- **CSS Grid** layout with `auto-fit`/`minmax` for responsive card reflow
+- **Floating pill navigation** — bottom-center nav with a sliding green indicator that tracks cursor position in real time via `getBoundingClientRect()`, snaps back to the active page on mouseleave
+- **HTML5 Constraint Validation API** — field-level error messages for name, email, phone, and message fields using `setCustomValidity()` / `checkValidity()`
+- **DOM access methods** — `getElementById()`, `getElementsByName()`, `getElementsByTagName()` demonstrated for form data extraction
+- **Fetch API** — asynchronous weather data from OpenWeatherMap with loading/success/error states and °F/°C unit toggle
+- **Responsive design** — single breakpoint at 600px; ecosystem flex row collapses naturally
+
+## Branch Structure
+
+This `pages-site` branch contains only the final deliverable (`project-final-submission/`), representing the completed 10-week project. Earlier weekly working directories have been removed.
