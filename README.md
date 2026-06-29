@@ -1,8 +1,12 @@
 # IT3240 - Front-End Web Development
 
-This repository contains my weekly assignments for **IT3240** at **Capella University**, spanning a 10-week quarter where I built a multi-page website for a fictional creative studio called **FourSides Studio**.
+This project was completed over 10 weeks for **IT3240: Introduction to Web Development** at **Capella University**. The course focused on thinking through the full design of a website — from concept to deployment — covering everything a company might need for their online presence.
 
-The project progresses from basic HTML through CSS layout, JavaScript DOM manipulation, form handling, client-side validation, and finally external API integration (OpenWeatherMap) with animated UI features.
+I created **FourSides Studio**, a Chicago-based art, creative, and technology company centered on open-source solutions and filmmaking. Inspired by platforms like Glitch, FourSides is envisioned as a creative collective where artists and technologists promote and support each other's work, allowing creators to pursue their passions without being stifled by major corporations.
+
+The project progresses through the fundamentals: building pages from scratch, creating forms, calling JavaScript APIs, implementing CSS layouts, and handling metadata — covering the full arc of front-end web development.
+
+**[View the live site](https://ctrluserknown.github.io/Capella.it3240/)**
 
 ## Tech Stack
 
