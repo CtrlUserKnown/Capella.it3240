@@ -159,6 +159,30 @@ strong {
     margin-top: 0.65rem;
 }
 
+/* ── GitHub source button ─────────────────────── */
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 1px solid rgba(45, 194, 149, 0.6);
+    color: #A8C8C8;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.9rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.github-btn:hover {
+    border-color: #06DF82;
+    color: #F1F7F7;
+}
+
 /* ── Stats ───────────────────────────────────── */
 
 .stats {
